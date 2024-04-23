@@ -1,0 +1,6 @@
+@Kickern_HostAddress = http://localhost:5091
+
+GET {{Kickern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
