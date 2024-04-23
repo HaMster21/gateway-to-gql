@@ -1,4 +1,7 @@
+using Spieler.Data;
+using Spieler.Domain;
 using Spieler.GraphQL;
+using Spieler.UseCase;
 
 namespace Spieler
 {
@@ -9,8 +12,13 @@ namespace Spieler
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IKickerSpielerRepository, InMemoryKickerSpielerRepository>();
+            builder.Services.AddScoped<SpielerAnlegen>();
+
             builder.Services.AddGraphQLServer()
-                            .AddQueryType<QueryType>();
+                            .AddQueryType<QueryType>()
+                            .AddMutationType<MutationType>()
+                            .AddMutationConventions(applyToAllMutations: false);
 
             var app = builder.Build();
 
