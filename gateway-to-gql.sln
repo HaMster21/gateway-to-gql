@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gateway", "src\gateway\gate
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8FF1BADC-CE23-4376-B1CF-C2A182DCCFDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spieler", "src\Spieler\Spieler.csproj", "{41C38F99-9B05-4BF3-A166-5BDC9C540C95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{8FF1BADC-CE23-4376-B1CF-C2A182DCCFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF1BADC-CE23-4376-B1CF-C2A182DCCFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF1BADC-CE23-4376-B1CF-C2A182DCCFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C38F99-9B05-4BF3-A166-5BDC9C540C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C38F99-9B05-4BF3-A166-5BDC9C540C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C38F99-9B05-4BF3-A166-5BDC9C540C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C38F99-9B05-4BF3-A166-5BDC9C540C95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

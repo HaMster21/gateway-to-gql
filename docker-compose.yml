@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: src/gateway/Dockerfile
+
+  spieler:
+    image: ${DOCKER_REGISTRY-}spieler
+    build:
+      context: .
+      dockerfile: src/Spieler/Dockerfile
+

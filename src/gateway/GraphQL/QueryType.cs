@@ -2,6 +2,6 @@
 {
     public class QueryType
     {
-        public string HelloFromGateway() => "Hello from gateway!";
+        public string HelloFromGateway() => "Grüße vom Gateway!";
     }
 }
