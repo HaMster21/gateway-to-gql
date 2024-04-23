@@ -1,7 +1,9 @@
-﻿namespace Kickern.GraphQL
+﻿using Kickern.Domain;
+
+namespace Kickern.GraphQL
 {
     public class QueryType
     {
-        public string HelloFromGame() => "Grüße vom Kickerservice!";
+        public async Task<IQueryable<KickerSpiel>> LaufendeSpiele([Service] IKickerspielRepository kickerspielRepository) => await kickerspielRepository.GetSpiele();
     }
 }

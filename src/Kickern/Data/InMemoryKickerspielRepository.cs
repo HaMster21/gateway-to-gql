@@ -12,5 +12,15 @@ namespace Kickern.Data
             _spiele.Add(spiel);
             return Task.CompletedTask;
         }
+
+        public Task<KickerSpiel?> GetSpielById(string id)
+        {
+            return Task.FromResult(_spiele.FirstOrDefault(s => s.Id == id));
+        }
+
+        public Task<IQueryable<KickerSpiel>> GetSpiele()
+        {
+            return Task.FromResult(_spiele.AsQueryable());
+        }
     }
 }

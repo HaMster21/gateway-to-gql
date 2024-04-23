@@ -17,7 +17,7 @@ namespace Spieler.Data
         public Task<KickerSpieler?> GetKickerSpielerById(string id)
             => Task.FromResult(_spieler.FirstOrDefault(s => s.Id == id));
 
-        public Task<IEnumerable<KickerSpieler>> GetKickerSpieler()
-            => Task.FromResult(_spieler.AsEnumerable());
+        public Task<IQueryable<KickerSpieler>> GetKickerSpieler()
+            => Task.FromResult(_spieler.AsQueryable());
     }
 }
