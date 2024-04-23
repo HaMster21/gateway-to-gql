@@ -5,5 +5,6 @@
         public Task Add(KickerSpiel spiel);
         public Task<KickerSpiel?> GetSpielById(string id);
         public Task<IQueryable<KickerSpiel>> GetSpiele();
+        public Task UpdateSpiel(KickerSpiel spiel);
     }
 }

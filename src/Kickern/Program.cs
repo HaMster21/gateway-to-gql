@@ -13,8 +13,10 @@ namespace Kickern
 
             // Add services to the container.
             builder.Services.AddSingleton<IKickerspielRepository, InMemoryKickerspielRepository>();
-            
-            builder.Services.AddScoped<SpielStarten>();
+
+            builder.Services.AddScoped<SpielStarten>()
+                            .AddScoped<TorFuerRot>()
+                            .AddScoped<TorFuerBlau>();
 
             builder.Services.AddGraphQLServer()
                             .AddQueryType<QueryType>()

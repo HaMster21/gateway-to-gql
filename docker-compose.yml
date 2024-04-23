@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: src/gateway/Dockerfile
+    ports:
+      - "5000:8080"
 
   spieler:
     image: ${DOCKER_REGISTRY-}spieler
@@ -11,10 +13,8 @@ services:
       context: .
       dockerfile: src/Spieler/Dockerfile
 
-
   kickern:
     image: ${DOCKER_REGISTRY-}kickern
     build:
       context: .
       dockerfile: src/Kickern/Dockerfile
-
