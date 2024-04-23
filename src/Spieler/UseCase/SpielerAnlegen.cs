@@ -34,10 +34,7 @@ namespace Spieler.UseCase
         public string Fehlercode { get; }
     }
 
-    public class SpielernameUngueltigException : InteraktionFehlgeschlagenException, ISpielerAnlegenFehler
-    {
-        public SpielernameUngueltigException(string fehlermeldung) : base(fehlermeldung, "WhoAmI")
-        {
-        }
-    }
+    public class SpielernameUngueltigException(string fehlermeldung) : InteraktionFehlgeschlagenException(fehlermeldung, "WhoAmI"), ISpielerAnlegenFehler { }
+
+    public class SpielernameExistiertBereitsException(string fehlermeldung) : InteraktionFehlgeschlagenException(fehlermeldung, "Doppelgänger"), ISpielerAnlegenFehler { }
 }

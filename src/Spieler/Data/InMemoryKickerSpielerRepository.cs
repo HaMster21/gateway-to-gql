@@ -6,7 +6,7 @@ namespace Spieler.Data
 {
     public class InMemoryKickerSpielerRepository : IKickerSpielerRepository
     {
-        private readonly ConcurrentBag<KickerSpieler> _spieler = new();
+        private readonly ConcurrentBag<KickerSpieler> _spieler = [];
 
         public Task Add(KickerSpieler spieler)
         {

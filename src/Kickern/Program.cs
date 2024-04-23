@@ -1,4 +1,7 @@
+using Kickern.Data;
+using Kickern.Domain;
 using Kickern.GraphQL;
+using Kickern.UseCase;
 
 namespace Kickern
 {
@@ -9,8 +12,14 @@ namespace Kickern
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IKickerspielRepository, InMemoryKickerspielRepository>();
+            
+            builder.Services.AddScoped<SpielStarten>();
+
             builder.Services.AddGraphQLServer()
-                            .AddQueryType<QueryType>();
+                            .AddQueryType<QueryType>()
+                            .AddMutationType<MutationType>()
+                            .AddMutationConventions(applyToAllMutations: false);
 
             var app = builder.Build();
 
