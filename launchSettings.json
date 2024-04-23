@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "gateway": "StartDebugging",
-        "spieler": "StartDebugging"
+        "spieler": "StartDebugging",
+        "kickern": "StartDebugging"
       }
     }
   }

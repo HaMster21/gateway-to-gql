@@ -1,7 +1,6 @@
 using System.Net;
 
 using gateway;
-using gateway.GraphQL;
 
 using Polly;
 using Polly.Extensions.Http;
@@ -19,8 +18,13 @@ builder.Services.AddHttpClient(ServiceSchemas.Spieler.ServiceName, c => c.BaseAd
                 .SetHandlerLifetime(TimeSpan.FromSeconds(3))
                 .AddPolicyHandler(DefaultRetryPolicy());
 
+builder.Services.AddHttpClient(ServiceSchemas.Kickern.ServiceName, c => c.BaseAddress = ServiceSchemas.Kickern.SchemaEndpoint)
+                .SetHandlerLifetime(TimeSpan.FromSeconds(3))
+                .AddPolicyHandler(DefaultRetryPolicy());
+
 builder.Services.AddGraphQLServer()
-                .AddRemoteSchema(ServiceSchemas.Spieler.ServiceName);
+                .AddRemoteSchema(ServiceSchemas.Spieler.ServiceName)
+                .AddRemoteSchema(ServiceSchemas.Kickern.ServiceName);
 
 var app = builder.Build();
 

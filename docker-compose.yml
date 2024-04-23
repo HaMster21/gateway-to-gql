@@ -11,3 +11,10 @@ services:
       context: .
       dockerfile: src/Spieler/Dockerfile
 
+
+  kickern:
+    image: ${DOCKER_REGISTRY-}kickern
+    build:
+      context: .
+      dockerfile: src/Kickern/Dockerfile
+
