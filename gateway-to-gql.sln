@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gateway", "src\gateway\gate
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8FF1BADC-CE23-4376-B1CF-C2A182DCCFDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spieler", "src\Spieler\Spieler.csproj", "{41C38F99-9B05-4BF3-A166-5BDC9C540C95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spieler", "src\Spieler\Spieler.csproj", "{41C38F99-9B05-4BF3-A166-5BDC9C540C95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kickern", "src\Kickern\Kickern.csproj", "{606699BE-80FE-461E-ABAE-D732DB91406C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kickern", "src\Kickern\Kickern.csproj", "{606699BE-80FE-461E-ABAE-D732DB91406C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +41,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{56161FC7-0E71-42FA-9B5A-1C035CBD5D18} = {D3B2A985-A46E-4781-AE98-1D9E23AABED7}
+		{41C38F99-9B05-4BF3-A166-5BDC9C540C95} = {D3B2A985-A46E-4781-AE98-1D9E23AABED7}
+		{606699BE-80FE-461E-ABAE-D732DB91406C} = {D3B2A985-A46E-4781-AE98-1D9E23AABED7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB49A432-09D1-4A9F-98FA-A100BF41E982}
