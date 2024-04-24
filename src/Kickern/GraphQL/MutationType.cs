@@ -14,5 +14,11 @@ namespace Kickern.GraphQL
         [Error(typeof(SpielNichtGefundenException))]
         [Error(typeof(SpielBereitsBeendetException))]
         public async Task<KickerSpiel> TorFuerRot(string spielID, string torschuetzeSpielerID, [Service] TorFuerRot torFuerRot) => await torFuerRot.Execute(spielID, torschuetzeSpielerID);
+
+        [UseMutationConvention]
+        [GraphQLDescription("Die blaue Mannschaft hat ein Tor geschossen")]
+        [Error(typeof(SpielNichtGefundenException))]
+        [Error(typeof(SpielBereitsBeendetException))]
+        public async Task<KickerSpiel> TorFuerBlau(string spielID, string torschuetzeSpielerID, [Service] TorFuerBlau torFuerBlau) => await torFuerBlau.Execute(spielID, torschuetzeSpielerID);
     }
 }
