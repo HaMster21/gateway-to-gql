@@ -24,7 +24,8 @@ builder.Services.AddHttpClient(ServiceSchemas.Kickern.ServiceName, c => c.BaseAd
 
 builder.Services.AddGraphQLServer()
                 .AddRemoteSchema(ServiceSchemas.Spieler.ServiceName)
-                .AddRemoteSchema(ServiceSchemas.Kickern.ServiceName);
+                .AddRemoteSchema(ServiceSchemas.Kickern.ServiceName)
+                .AddTypeExtensionsFromFile("./Stitching.graphql");
 
 var app = builder.Build();
 
