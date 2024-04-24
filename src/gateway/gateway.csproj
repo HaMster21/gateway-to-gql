@@ -20,4 +20,10 @@
     <ProjectReference Include="..\Discovery\Discovery.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Stitching.graphql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
