@@ -1,5 +1,3 @@
-using System.Runtime.Serialization;
-
 using Kickern.Domain;
 
 namespace Kickern.UseCase

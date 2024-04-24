@@ -1,6 +1,6 @@
 using System.Net;
 
-using gateway;
+using Discovery;
 
 using Polly;
 using Polly.Extensions.Http;

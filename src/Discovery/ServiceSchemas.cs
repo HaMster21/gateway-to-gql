@@ -1,4 +1,4 @@
-﻿namespace gateway;
+﻿namespace Discovery;
 
 public static class ServiceSchemas
 {

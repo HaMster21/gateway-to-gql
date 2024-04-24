@@ -1,7 +1,5 @@
 ﻿using System.Collections.Concurrent;
 
-using HotChocolate.Language;
-
 using Kickern.Domain;
 
 namespace Kickern.Data

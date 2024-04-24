@@ -1,3 +1,5 @@
+using Discovery;
+
 using Kickern.Data;
 using Kickern.Domain;
 using Kickern.GraphQL;
@@ -10,6 +12,8 @@ namespace Kickern
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddHttpClient(ServiceSchemas.Spieler.ServiceName, c => c.BaseAddress = ServiceSchemas.Spieler.SchemaEndpoint);
 
             // Add services to the container.
             builder.Services.AddSingleton<IKickerspielRepository, InMemoryKickerspielRepository>();
